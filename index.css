@@ -151,9 +151,9 @@ input {
 
 .vetting-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -164,6 +164,8 @@ input {
     gap: 1.5rem;
     padding: 2rem 1rem;
     transition: transform 0.4s var(--transition-smooth);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .vetting-item:hover {
@@ -511,7 +513,7 @@ input {
     }
 
     .vetting-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 }
