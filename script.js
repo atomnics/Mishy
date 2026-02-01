@@ -3,7 +3,106 @@
  * Interactive JavaScript
  */
 
+/**
+ * Internationalization (i18n) System
+ */
+const translations = {
+    en: {
+        'hero.title': "Connecting Global Capital to<br>Tanzania's Prime Origins",
+        'hero.subtitle': 'Curated Access to Verified African Excellence',
+        'vetting.title': 'The Vetting Protocol',
+        'vetting.source': 'Source Validation',
+        'vetting.integrity': 'Integrity Protocol',
+        'vetting.quality': 'Quality Audit',
+        'vetting.compliance': 'Global Compliance',
+        'vetting.monitoring': 'Continuous Monitoring',
+        'directory.title': 'The Directory',
+        'portal.title': 'Request Access to Source',
+        'portal.name': 'Full Name',
+        'portal.company': 'Company',
+        'portal.submit': 'Initiate Trade Inquiry',
+        'portal.success': 'Your inquiry has been received. We will be in contact shortly.',
+        'footer.copyright': '© 2026 Tanzania Prime Origins. All Rights Reserved.',
+        'product.verified': 'Verified Origin',
+        'product.coffee.name': 'Organic Coffee',
+        'product.coffee.region': 'Arusha',
+        'product.cloves.name': 'Zanzibar Cloves',
+        'product.cloves.region': 'Zanzibar',
+        'product.cashews.name': 'Raw Cashews',
+        'product.cashews.region': 'Mtwara',
+        'product.avocados.name': 'Hass Avocados',
+        'product.avocados.region': 'Njombe',
+        'product.honey.name': 'Wildflower Honey',
+        'product.honey.region': 'Tabora'
+    },
+    sw: {
+        'hero.title': "Kuunganisha Mtaji wa Kimataifa na<br>Vyanzo Bora vya Tanzania",
+        'hero.subtitle': 'Upatikanaji wa Ubora wa Afrika Ulioidhinishwa',
+        'vetting.title': 'Itifaki ya Ukaguzi',
+        'vetting.source': 'Uthibitisho wa Chanzo',
+        'vetting.integrity': 'Itifaki ya Uadilifu',
+        'vetting.quality': 'Ukaguzi wa Ubora',
+        'vetting.compliance': 'Uzingatiaji wa Kimataifa',
+        'vetting.monitoring': 'Ufuatiliaji Endelevu',
+        'directory.title': 'Orodha ya Bidhaa',
+        'portal.title': 'Omba Upatikanaji wa Chanzo',
+        'portal.name': 'Jina Kamili',
+        'portal.company': 'Kampuni',
+        'portal.submit': 'Anzisha Ombi la Biashara',
+        'portal.success': 'Ombi lako limepokelewa. Tutawasiliana nawe karibuni.',
+        'footer.copyright': '© 2026 Tanzania Prime Origins. Haki Zote Zimehifadhiwa.',
+        'product.verified': 'Chanzo Kilichothibitishwa',
+        'product.coffee.name': 'Kahawa ya Kikaboni',
+        'product.coffee.region': 'Arusha',
+        'product.cloves.name': 'Karafuu za Zanzibar',
+        'product.cloves.region': 'Zanzibar',
+        'product.cashews.name': 'Korosho Mbichi',
+        'product.cashews.region': 'Mtwara',
+        'product.avocados.name': 'Parachichi Hass',
+        'product.avocados.region': 'Njombe',
+        'product.honey.name': 'Asali ya Maua Pori',
+        'product.honey.region': 'Tabora'
+    }
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Update lang buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Update html lang attribute
+    document.documentElement.lang = lang;
+}
+
+function initLanguageSwitcher() {
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            setLanguage(btn.dataset.lang);
+        });
+    });
+
+    // Apply saved language on load
+    setLanguage(currentLang);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initLanguageSwitcher();
     initCarousel();
     initForm();
     initScrollAnimations();

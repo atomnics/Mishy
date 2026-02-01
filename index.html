@@ -16,18 +16,25 @@
 </head>
 
 <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="sw">SW</button>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Connecting Global Capital to<br>Tanzania's Prime Origins</h1>
-            <p class="hero-subtitle">Curated Access to Verified African Excellence</p>
+            <h1 class="hero-title" data-i18n="hero.title">Connecting Global Capital to<br>Tanzania's Prime Origins</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Curated Access to Verified African Excellence</p>
             <div class="hero-line"></div>
         </div>
     </section>
 
     <!-- Vetting Protocol Section -->
     <section class="vetting">
-        <h2 class="section-eyebrow">The Vetting Protocol</h2>
+        <h2 class="section-eyebrow" data-i18n="vetting.title">The Vetting Protocol</h2>
         <div class="vetting-grid">
             <a href="protocol.html#step-1" class="vetting-item">
                 <div class="vetting-icon">
@@ -37,7 +44,7 @@
                         <circle cx="24" cy="24" r="3" stroke="currentColor" stroke-width="1" />
                     </svg>
                 </div>
-                <span class="vetting-label">Source Validation</span>
+                <span class="vetting-label" data-i18n="vetting.source">Source Validation</span>
             </a>
             <a href="protocol.html#step-2" class="vetting-item">
                 <div class="vetting-icon">
@@ -47,7 +54,7 @@
                             stroke-linejoin="round" />
                     </svg>
                 </div>
-                <span class="vetting-label">Integrity Protocol</span>
+                <span class="vetting-label" data-i18n="vetting.integrity">Integrity Protocol</span>
             </a>
             <a href="protocol.html#step-3" class="vetting-item">
                 <div class="vetting-icon">
@@ -59,7 +66,7 @@
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-                <span class="vetting-label">Quality Audit</span>
+                <span class="vetting-label" data-i18n="vetting.quality">Quality Audit</span>
             </a>
             <a href="protocol.html#step-4" class="vetting-item">
                 <div class="vetting-icon">
@@ -71,7 +78,7 @@
                         <path d="M10 34H38" stroke="currentColor" stroke-width="1" />
                     </svg>
                 </div>
-                <span class="vetting-label">Global Compliance</span>
+                <span class="vetting-label" data-i18n="vetting.compliance">Global Compliance</span>
             </a>
             <a href="protocol.html#step-5" class="vetting-item">
                 <div class="vetting-icon">
@@ -86,14 +93,14 @@
                         <path d="M8 16L12 18" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
                     </svg>
                 </div>
-                <span class="vetting-label">Continuous Monitoring</span>
+                <span class="vetting-label" data-i18n="vetting.monitoring">Continuous Monitoring</span>
             </a>
         </div>
     </section>
 
     <!-- Directory Section -->
     <section class="directory">
-        <h2 class="section-eyebrow">The Directory</h2>
+        <h2 class="section-eyebrow" data-i18n="directory.title">The Directory</h2>
         <div class="carousel-container">
             <button class="carousel-arrow carousel-prev" aria-label="Previous">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,12 +117,12 @@
                                     d="M12 2L14.09 8.26L21 9.27L16 14.14L17.18 21.02L12 17.77L6.82 21.02L8 14.14L3 9.27L9.91 8.26L12 2Z"
                                     fill="currentColor" />
                             </svg>
-                            <span>Verified Origin</span>
+                            <span data-i18n="product.verified">Verified Origin</span>
                         </div>
                         <img src="images/coffee_arusha.webp" alt="Organic Coffee from Arusha" loading="lazy">
                         <div class="product-info">
-                            <h3>Organic Coffee</h3>
-                            <p>Arusha</p>
+                            <h3 data-i18n="product.coffee.name">Organic Coffee</h3>
+                            <p data-i18n="product.coffee.region">Arusha</p>
                         </div>
                     </a>
                     <a href="products/cloves.html" class="product-card" data-index="1">
@@ -125,12 +132,12 @@
                                     d="M12 2L14.09 8.26L21 9.27L16 14.14L17.18 21.02L12 17.77L6.82 21.02L8 14.14L3 9.27L9.91 8.26L12 2Z"
                                     fill="currentColor" />
                             </svg>
-                            <span>Verified Origin</span>
+                            <span data-i18n="product.verified">Verified Origin</span>
                         </div>
                         <img src="images/cloves_zanzibar.webp" alt="Zanzibar Cloves" loading="lazy">
                         <div class="product-info">
-                            <h3>Zanzibar Cloves</h3>
-                            <p>Zanzibar</p>
+                            <h3 data-i18n="product.cloves.name">Zanzibar Cloves</h3>
+                            <p data-i18n="product.cloves.region">Zanzibar</p>
                         </div>
                     </a>
                     <a href="products/cashews.html" class="product-card" data-index="2">
@@ -140,12 +147,12 @@
                                     d="M12 2L14.09 8.26L21 9.27L16 14.14L17.18 21.02L12 17.77L6.82 21.02L8 14.14L3 9.27L9.91 8.26L12 2Z"
                                     fill="currentColor" />
                             </svg>
-                            <span>Verified Origin</span>
+                            <span data-i18n="product.verified">Verified Origin</span>
                         </div>
                         <img src="images/cashews_mtwara.webp" alt="Raw Cashews from Mtwara" loading="lazy">
                         <div class="product-info">
-                            <h3>Raw Cashews</h3>
-                            <p>Mtwara</p>
+                            <h3 data-i18n="product.cashews.name">Raw Cashews</h3>
+                            <p data-i18n="product.cashews.region">Mtwara</p>
                         </div>
                     </a>
                     <a href="products/avocados.html" class="product-card" data-index="3">
@@ -155,12 +162,12 @@
                                     d="M12 2L14.09 8.26L21 9.27L16 14.14L17.18 21.02L12 17.77L6.82 21.02L8 14.14L3 9.27L9.91 8.26L12 2Z"
                                     fill="currentColor" />
                             </svg>
-                            <span>Verified Origin</span>
+                            <span data-i18n="product.verified">Verified Origin</span>
                         </div>
                         <img src="images/avocados_njombe.webp" alt="Hass Avocados from Njombe" loading="lazy">
                         <div class="product-info">
-                            <h3>Hass Avocados</h3>
-                            <p>Njombe</p>
+                            <h3 data-i18n="product.avocados.name">Hass Avocados</h3>
+                            <p data-i18n="product.avocados.region">Njombe</p>
                         </div>
                     </a>
                     <a href="products/honey.html" class="product-card" data-index="4">
@@ -170,12 +177,12 @@
                                     d="M12 2L14.09 8.26L21 9.27L16 14.14L17.18 21.02L12 17.77L6.82 21.02L8 14.14L3 9.27L9.91 8.26L12 2Z"
                                     fill="currentColor" />
                             </svg>
-                            <span>Verified Origin</span>
+                            <span data-i18n="product.verified">Verified Origin</span>
                         </div>
                         <img src="images/honey_tabora.webp" alt="Wildflower Honey from Tabora" loading="lazy">
                         <div class="product-info">
-                            <h3>Wildflower Honey</h3>
-                            <p>Tabora</p>
+                            <h3 data-i18n="product.honey.name">Wildflower Honey</h3>
+                            <p data-i18n="product.honey.region">Tabora</p>
                         </div>
                     </a>
                 </div>
@@ -198,18 +205,18 @@
 
     <!-- Portal Section -->
     <section id="portal" class="portal">
-        <h2 class="portal-title">Request Access to Source</h2>
+        <h2 class="portal-title" data-i18n="portal.title">Request Access to Source</h2>
         <form class="portal-form" id="inquiryForm">
             <div class="form-group">
-                <label for="fullName">Full Name</label>
+                <label for="fullName" data-i18n="portal.name">Full Name</label>
                 <input type="text" id="fullName" name="fullName" required autocomplete="name">
             </div>
             <div class="form-group">
-                <label for="company">Company</label>
+                <label for="company" data-i18n="portal.company">Company</label>
                 <input type="text" id="company" name="company" required autocomplete="organization">
             </div>
             <button type="submit" class="submit-btn">
-                <span>Initiate Trade Inquiry</span>
+                <span data-i18n="portal.submit">Initiate Trade Inquiry</span>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1"
                         stroke-linecap="round" stroke-linejoin="round" />
@@ -222,13 +229,13 @@
                 <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1" stroke-linecap="round"
                     stroke-linejoin="round" />
             </svg>
-            <p>Your inquiry has been received. We will be in contact shortly.</p>
+            <p data-i18n="portal.success">Your inquiry has been received. We will be in contact shortly.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Tanzania Prime Origins. All Rights Reserved.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 Tanzania Prime Origins. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
